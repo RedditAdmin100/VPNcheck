@@ -37,6 +37,8 @@ Partial Class Form2
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -167,11 +169,32 @@ Partial Class Form2
         Me.Label8.TabIndex = 13
         Me.Label8.Text = "Make sure VPNcheck is set to always have its taskbar icon shown"
         '
+        'LinkLabel3
+        '
+        Me.LinkLabel3.AutoSize = True
+        Me.LinkLabel3.Location = New System.Drawing.Point(8, 481)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(213, 13)
+        Me.LinkLabel3.TabIndex = 18
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "Taskbar Icons for newer versions of Win 10"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(150, 468)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(179, 13)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "- Win 7 and older versions of Win 10"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(370, 536)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
@@ -208,4 +231,6 @@ Partial Class Form2
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents Label8 As Label
+    Friend WithEvents LinkLabel3 As LinkLabel
+    Friend WithEvents Label9 As Label
 End Class

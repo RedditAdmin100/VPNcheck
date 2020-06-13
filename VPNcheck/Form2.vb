@@ -62,4 +62,8 @@ Public Class Form2
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
 
     End Sub
+
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        Process.Start("https://www.digitalcitizen.life/how-set-which-icons-are-shown-windows-10s-notification-area")
+    End Sub
 End Class

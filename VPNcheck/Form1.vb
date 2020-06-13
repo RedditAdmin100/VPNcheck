@@ -150,4 +150,8 @@ Public Class Form1
     Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         Shell("explorer shell:::{05d7b0f4-2121-4eff-bf6b-ed3f69b894d9}")
     End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start("https://www.digitalcitizen.life/how-set-which-icons-are-shown-windows-10s-notification-area")
+    End Sub
 End Class
