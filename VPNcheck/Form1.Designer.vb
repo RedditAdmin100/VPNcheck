@@ -41,6 +41,8 @@ Partial Class Form1
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,7 +50,7 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(106, 9)
+        Me.Label1.Location = New System.Drawing.Point(114, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(92, 20)
         Me.Label1.TabIndex = 0
@@ -95,7 +97,7 @@ Partial Class Form1
         '
         Me.Button1.Location = New System.Drawing.Point(-1, 55)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(312, 23)
+        Me.Button1.Size = New System.Drawing.Size(336, 23)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Minimize to System Tray to Monitor in Background"
         Me.Button1.UseVisualStyleBackColor = True
@@ -108,7 +110,7 @@ Partial Class Form1
         '
         Me.Button2.Location = New System.Drawing.Point(-1, 129)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(312, 23)
+        Me.Button2.Size = New System.Drawing.Size(336, 23)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Connect to VPN"
         Me.Button2.UseVisualStyleBackColor = True
@@ -117,7 +119,7 @@ Partial Class Form1
         '
         Me.Button3.Location = New System.Drawing.Point(-1, 178)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(312, 23)
+        Me.Button3.Size = New System.Drawing.Size(336, 23)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "Disconnect from VPN"
         Me.Button3.UseVisualStyleBackColor = True
@@ -126,13 +128,13 @@ Partial Class Form1
         '
         Me.TextBox1.Location = New System.Drawing.Point(12, 316)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(288, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(310, 20)
         Me.TextBox1.TabIndex = 5
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(54, 339)
+        Me.Label2.Location = New System.Drawing.Point(64, 339)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(206, 13)
         Me.Label2.TabIndex = 6
@@ -142,7 +144,7 @@ Partial Class Form1
         '
         Me.Button4.Location = New System.Drawing.Point(-1, 260)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(312, 23)
+        Me.Button4.Size = New System.Drawing.Size(336, 23)
         Me.Button4.TabIndex = 9
         Me.Button4.Text = "Setup "
         Me.Button4.UseVisualStyleBackColor = True
@@ -151,7 +153,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(106, 29)
+        Me.Label3.Location = New System.Drawing.Point(114, 32)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(101, 20)
         Me.Label3.TabIndex = 10
@@ -162,19 +164,41 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(33, 213)
+        Me.Label4.Location = New System.Drawing.Point(44, 221)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(242, 20)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Please go through setup process"
         Me.Label4.Visible = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(9, 453)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(321, 13)
+        Me.Label8.TabIndex = 15
+        Me.Label8.Text = "Make sure VPNcheck is set to always have its taskbar icon shown"
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Location = New System.Drawing.Point(9, 475)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(145, 13)
+        Me.LinkLabel2.TabIndex = 14
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Open Taskbar Icons Settings"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(312, 363)
+        Me.ClientSize = New System.Drawing.Size(334, 497)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button4)
@@ -212,4 +236,6 @@ Partial Class Form1
     Friend WithEvents Button4 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents LinkLabel2 As LinkLabel
 End Class
