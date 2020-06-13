@@ -4,4 +4,4 @@ MAKE SURE THE TASKBAR ICON IS SET TO ALWAYS BE SHOWN -https://www.digitalcitizen
 
 During the intial setup make sure you are actively connected to the VPN you want to monitor, otherwise the VPN connection will not be found.
 
-So far it has only been tested on Windows 10 version 1909 - It should however work fine with other versions of Windows 10 and possibly Windows 7
+So far it has been tested on Windows 10 version 1511, 1809, and 1909 - It should however work fine with other versions of Windows 10 and possibly Windows 7
