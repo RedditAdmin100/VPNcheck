@@ -20,6 +20,8 @@ Public Class Form1
             Button1.Visible = False
             Button2.Visible = False
             Button3.Visible = False
+            Button5.Visible = False
+            CheckBox1.Visible = False
             TextBox1.Visible = False
             Label2.Visible = False
             Label1.Visible = False
@@ -162,5 +164,20 @@ Public Class Form1
 
     Private Sub NotifyEvery10MinsIfConnectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NotifyEvery10MinsIfConnectedToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            Button5.Enabled = True
+        Else
+            Button5.Enabled = False
+
+        End If
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        MsgBox("Program will now close. The VPN status icon will no longer be available. Remember to open VPNcheck if you want to monitor your VPN status")
+
+        Me.Close()
     End Sub
 End Class

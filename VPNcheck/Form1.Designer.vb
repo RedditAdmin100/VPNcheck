@@ -46,6 +46,8 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.NotifyEvery10MinsIfConnectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -98,12 +100,13 @@ Partial Class Form1
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Button1.Location = New System.Drawing.Point(-1, 55)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(336, 23)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Minimize to System Tray to Monitor in Background"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Timer3
         '
@@ -178,7 +181,7 @@ Partial Class Form1
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(1, 439)
+        Me.Label8.Location = New System.Drawing.Point(1, 465)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(321, 13)
         Me.Label8.TabIndex = 15
@@ -187,7 +190,7 @@ Partial Class Form1
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(1, 461)
+        Me.LinkLabel2.Location = New System.Drawing.Point(1, 487)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(145, 13)
         Me.LinkLabel2.TabIndex = 14
@@ -197,7 +200,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(143, 462)
+        Me.Label5.Location = New System.Drawing.Point(143, 488)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(179, 13)
         Me.Label5.TabIndex = 16
@@ -206,7 +209,7 @@ Partial Class Form1
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(1, 475)
+        Me.LinkLabel1.Location = New System.Drawing.Point(1, 501)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(213, 13)
         Me.LinkLabel1.TabIndex = 17
@@ -222,12 +225,35 @@ Partial Class Form1
         Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
         Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Text = "Notify every 10 mins if connected"
         '
+        'Button5
+        '
+        Me.Button5.Enabled = False
+        Me.Button5.Location = New System.Drawing.Point(-1, 406)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(336, 23)
+        Me.Button5.TabIndex = 18
+        Me.Button5.Text = "Close Program and Stop Monitoring"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Font = New System.Drawing.Font("Lucida Sans", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(4, 382)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(327, 18)
+        Me.CheckBox1.TabIndex = 19
+        Me.CheckBox1.Text = "Allow program closure (VPN will no longer be monitored)"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(334, 497)
+        Me.ClientSize = New System.Drawing.Size(334, 519)
         Me.ControlBox = False
+        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label8)
@@ -274,4 +300,6 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents NotifyEvery10MinsIfConnectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button5 As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

@@ -37,6 +37,9 @@ Public Class Form2
         Form1.Label1.Visible = True
         Form1.Label3.Visible = False
         Form1.Label4.Visible = False
+        Form1.Button5.Visible = True
+        Form1.CheckBox1.Visible = True
+
         Form1.Show()
     End Sub
 
