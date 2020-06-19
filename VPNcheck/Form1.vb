@@ -91,15 +91,18 @@ Public Class Form1
 
         Dim nics As NetworkInterface() = NetworkInterface.GetAllNetworkInterfaces
         Dim isVpnExist As Boolean = nics.AsEnumerable().Any(Function(x) x.Name = TextBox1.Text)
-        If isVpnExist = True Then
-            Label1.Text = "VPN IS ON"
-            'NotifyIcon2.Visible = True
-            NotifyIcon1.ShowBalloonTip(1, "VPN", "VPN is running", ToolTipIcon.None)
-            NotifyIcon1.Icon = My.Resources.connected
 
+        If isVpnExist = True Then
+            If NotifyEvery10MinsIfConnectedToolStripMenuItem.Checked = True Then
+                Label1.Text = "VPN IS ON"
+                'NotifyIcon2.Visible = True
+                NotifyIcon1.ShowBalloonTip(1, "VPN", "VPN is running", ToolTipIcon.None)
+                NotifyIcon1.Icon = My.Resources.connected
+            Else
+            End If
         Else
-            ' vpn is not exist do something
-            Label1.Text = "VPN IS OFF"
+                ' vpn is not exist do something
+                Label1.Text = "VPN IS OFF"
             'NotifyIcon2.Visible = False
             NotifyIcon1.Icon = My.Resources.notconnected
         End If
@@ -153,5 +156,11 @@ Public Class Form1
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Process.Start("https://www.digitalcitizen.life/how-set-which-icons-are-shown-windows-10s-notification-area")
+    End Sub
+
+
+
+    Private Sub NotifyEvery10MinsIfConnectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NotifyEvery10MinsIfConnectedToolStripMenuItem.Click
+
     End Sub
 End Class

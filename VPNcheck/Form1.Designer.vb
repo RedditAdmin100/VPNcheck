@@ -45,6 +45,7 @@ Partial Class Form1
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,26 +68,26 @@ Partial Class Form1
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenProgramToolStripMenuItem, Me.ConnectToVpnToolStripMenuItem, Me.DisconnectVPNToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenProgramToolStripMenuItem, Me.ConnectToVpnToolStripMenuItem, Me.DisconnectVPNToolStripMenuItem, Me.NotifyEvery10MinsIfConnectedToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(160, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(252, 92)
         '
         'OpenProgramToolStripMenuItem
         '
         Me.OpenProgramToolStripMenuItem.Name = "OpenProgramToolStripMenuItem"
-        Me.OpenProgramToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.OpenProgramToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
         Me.OpenProgramToolStripMenuItem.Text = "Open Program"
         '
         'ConnectToVpnToolStripMenuItem
         '
         Me.ConnectToVpnToolStripMenuItem.Name = "ConnectToVpnToolStripMenuItem"
-        Me.ConnectToVpnToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.ConnectToVpnToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
         Me.ConnectToVpnToolStripMenuItem.Text = "Connect to VPN"
         '
         'DisconnectVPNToolStripMenuItem
         '
         Me.DisconnectVPNToolStripMenuItem.Name = "DisconnectVPNToolStripMenuItem"
-        Me.DisconnectVPNToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.DisconnectVPNToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
         Me.DisconnectVPNToolStripMenuItem.Text = "Disconnect VPN"
         '
         'Timer1
@@ -212,6 +213,15 @@ Partial Class Form1
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Taskbar Icons for newer versions of Win 10"
         '
+        'NotifyEvery10MinsIfConnectedToolStripMenuItem
+        '
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Checked = Global.VPNcheck.My.MySettings.Default.notify10min
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.CheckOnClick = True
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.CheckState = Global.VPNcheck.My.MySettings.Default.notify1
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Name = Global.VPNcheck.My.MySettings.Default.Notify10
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Text = "Notify every 10 mins if connected"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -263,4 +273,5 @@ Partial Class Form1
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents Label5 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents NotifyEvery10MinsIfConnectedToolStripMenuItem As ToolStripMenuItem
 End Class

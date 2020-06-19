@@ -65,6 +65,42 @@ Namespace My
                 Me("vpnname") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("NotifyEvery10MinsIfConnectedToolStripMenuItem")>  _
+        Public Property Notify10() As String
+            Get
+                Return CType(Me("Notify10"),String)
+            End Get
+            Set
+                Me("Notify10") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property notify10min() As Boolean
+            Get
+                Return CType(Me("notify10min"),Boolean)
+            End Get
+            Set
+                Me("notify10min") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Checked")>  _
+        Public Property notify1() As Global.System.Windows.Forms.CheckState
+            Get
+                Return CType(Me("notify1"),Global.System.Windows.Forms.CheckState)
+            End Get
+            Set
+                Me("notify1") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

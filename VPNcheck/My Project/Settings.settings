@@ -5,5 +5,14 @@
     <Setting Name="vpnname" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Notify10" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NotifyEvery10MinsIfConnectedToolStripMenuItem</Value>
+    </Setting>
+    <Setting Name="notify10min" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="notify1" Type="System.Windows.Forms.CheckState" Scope="User">
+      <Value Profile="(Default)">Checked</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
