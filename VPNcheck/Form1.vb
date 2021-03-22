@@ -59,6 +59,13 @@ Public Class Form1
         Me.WindowState = FormWindowState.Normal
     End Sub
 
+    Private Sub NotifyIcon1_MouseClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseUp
+
+        Me.Visible = True
+            Me.WindowState = FormWindowState.Normal
+
+    End Sub
+
     Private Sub OpenProgramToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenProgramToolStripMenuItem.Click
         Me.Visible = True
 
@@ -179,5 +186,9 @@ Public Class Form1
         MsgBox("Program will now close. The VPN status icon will no longer be available. Remember to open VPNcheck if you want to monitor your VPN status")
 
         Me.Close()
+    End Sub
+
+    Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
+
     End Sub
 End Class

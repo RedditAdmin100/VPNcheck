@@ -30,6 +30,7 @@ Partial Class Form1
         Me.OpenProgramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConnectToVpnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisconnectVPNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
@@ -45,7 +46,6 @@ Partial Class Form1
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -72,7 +72,7 @@ Partial Class Form1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenProgramToolStripMenuItem, Me.ConnectToVpnToolStripMenuItem, Me.DisconnectVPNToolStripMenuItem, Me.NotifyEvery10MinsIfConnectedToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(252, 92)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(252, 114)
         '
         'OpenProgramToolStripMenuItem
         '
@@ -91,6 +91,15 @@ Partial Class Form1
         Me.DisconnectVPNToolStripMenuItem.Name = "DisconnectVPNToolStripMenuItem"
         Me.DisconnectVPNToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
         Me.DisconnectVPNToolStripMenuItem.Text = "Disconnect VPN"
+        '
+        'NotifyEvery10MinsIfConnectedToolStripMenuItem
+        '
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Checked = Global.VPNcheck.My.MySettings.Default.notify10min
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.CheckOnClick = True
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.CheckState = Global.VPNcheck.My.MySettings.Default.notify1
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Name = Global.VPNcheck.My.MySettings.Default.Notify10
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
+        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Text = "Notify every 10 mins if connected"
         '
         'Timer1
         '
@@ -215,15 +224,6 @@ Partial Class Form1
         Me.LinkLabel1.TabIndex = 17
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Taskbar Icons for newer versions of Win 10"
-        '
-        'NotifyEvery10MinsIfConnectedToolStripMenuItem
-        '
-        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Checked = Global.VPNcheck.My.MySettings.Default.notify10min
-        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.CheckOnClick = True
-        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.CheckState = Global.VPNcheck.My.MySettings.Default.notify1
-        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Name = Global.VPNcheck.My.MySettings.Default.Notify10
-        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Size = New System.Drawing.Size(251, 22)
-        Me.NotifyEvery10MinsIfConnectedToolStripMenuItem.Text = "Notify every 10 mins if connected"
         '
         'Button5
         '
